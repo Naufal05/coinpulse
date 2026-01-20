@@ -8,10 +8,21 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import { DataTableProps } from "@/type";
 
-const DataTable = () => {
+const DataTable = <T,>({
+  columns,
+  data,
+  rowKey,
+  tableClassName,
+  headerRowClassName,
+  headerCellClassName,
+  bodyRowClassName,
+  bodyCellClassName,
+}: DataTableProps<T>) => {
   return (
     <Table>
+      <TableCaption>A list of your recent invoices.</TableCaption>
       <TableHeader>
         <TableRow>
           <TableHead className="w-[100px]">Invoices</TableHead>
