@@ -7,4 +7,5 @@ export interface DataTableProps<T> {
   headerCellClassName?: string;
   bodyRowClassName?: string;
   bodyCellClassName?: string;
+  headerClassName?: string;
 }
